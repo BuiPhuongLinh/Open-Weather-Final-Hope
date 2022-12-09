@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/currentForecastFragment">
+
+    <fragment
+        android:id="@+id/currentForecastFragment"
+        android:name="com.cmc.openweather.presentation.detail.WeatherDetailFragment"
+        android:label="@string/current_forecast_screen"
+        tools:layout="@layout/fragment_current">
+        <action
+            android:id="@+id/action_currentForecastFragment_to_wholedayFragment"
+            app:destination="@id/wholeDayFragment">
+
+            <argument
+                android:name="lat"
+                app:argType="float" />
+
+            <argument
+                android:name="long"
+                app:argType="float" />
+
+            <argument
+                android:name="is_celsius"
+                app:argType="boolean" />
+        </action>
+
+        <action
+            android:id="@+id/action_currentForecastFragment_to_citiesFragment"
+            app:destination="@id/cityFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/wholeDayFragment"
+        android:name="com.cmc.openweather.presentation.wholeday.WholeDayFragment"
+        android:label="@string/whole_day_forecast_screen"
+        tools:layout="@layout/fragment_whole_day">
+
+        <argument
+            android:name="lat"
+            app:argType="float" />
+
+        <argument
+            android:name="long"
+            app:argType="float" />
+
+        <argument
+            android:name="is_celsius"
+            app:argType="boolean" />
+
+        <argument
+            android:name="city_name"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cityFragment"
+        android:name="com.cmc.openweather.presentation.city.CitiesFragment"
+        android:label="@string/cities_screen"
+        tools:layout="@layout/fragment_cities">
+
+        <action
+            android:id="@+id/action_cityFragment_to_detailFragment"
+            app:destination="@id/currentForecastFragment">
+            <argument
+                android:name="lat"
+                app:argType="string" />
+            <argument
+                android:name="long"
+                app:argType="string" />
+        </action>
+    </fragment>
+</navigation>

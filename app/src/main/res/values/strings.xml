@@ -1,0 +1,33 @@
+<resources>
+    <string name="app_name">OpenWeather</string>
+    <string name="error_couldnt_reach_server">\"Oops! Server error!\"</string>
+    <string name="error_something_wrong">\"Oops! Somethings wrong!\"</string>
+    <string name="error_unknown">Unknown error</string>
+
+    <string name="enable_gps">Enable GPS</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="no_data">No Data</string>
+    <string name="cant_get_location">Can not get your location</string>
+
+    <string name="whole_day_forecast_of_city">Whole day forecast of %s</string>
+
+    <string name="current_forecast_screen">Current Forecast</string>
+    <string name="cities_screen">Cities</string>
+    <string name="whole_day_forecast_screen">Whole Day Forecast Forecast</string>
+
+    <string name="humidity">%s%%</string>
+    <string name="temperature_celsius">°C</string>
+    <string name="temperature_fahrenheit">°F</string>
+
+    <string name="temperature_c">%s°C</string>
+    <string name="temperature_f">%s°F</string>
+    <string name="search_icon">search_icon</string>
+    <string name="today">Today</string>
+    <string name="change_temperature_unit">Change unit</string>
+    <string name="humidity_label">Humidity:</string>
+    <string name="change_city">Change City</string>
+    <string name="see_whole_day">See whole day</string>
+
+
+</resources>
